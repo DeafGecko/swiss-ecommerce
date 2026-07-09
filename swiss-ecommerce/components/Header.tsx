@@ -60,19 +60,27 @@ export function Header() {
 
         {/* Right side icons */}
         <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-          <Link href="/wishlist" className="relative p-1.5">
-            <Heart size={18} />
+          <Link
+            href="/wishlist"
+            className="relative p-1.5"
+            aria-label={isMounted && wishlistCount > 0 ? `Wishlist (${wishlistCount} item${wishlistCount === 1 ? '' : 's'})` : 'Wishlist'}
+          >
+            <Heart size={18} aria-hidden="true" />
             {isMounted && wishlistCount > 0 && (
-              <span className="absolute -top-1 -right-1 bg-[var(--color-primary)] text-[var(--color-text-inverse)] text-[10px] font-mono w-4 h-4 rounded-full flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 bg-[var(--color-primary)] text-[var(--color-text-inverse)] text-[10px] font-mono w-4 h-4 rounded-full flex items-center justify-center" aria-hidden="true">
                 {wishlistCount}
               </span>
             )}
           </Link>
 
-          <Link href="/cart" className="relative p-1.5">
-            <ShoppingCart size={18} />
+          <Link
+            href="/cart"
+            className="relative p-1.5"
+            aria-label={isMounted && itemCount > 0 ? `Shopping cart (${itemCount} item${itemCount === 1 ? '' : 's'})` : 'Shopping cart'}
+          >
+            <ShoppingCart size={18} aria-hidden="true" />
             {isMounted && itemCount > 0 && (
-              <span className="absolute -top-1 -right-1 bg-[var(--color-primary)] text-[var(--color-text-inverse)] text-[10px] font-mono w-4 h-4 rounded-full flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 bg-[var(--color-primary)] text-[var(--color-text-inverse)] text-[10px] font-mono w-4 h-4 rounded-full flex items-center justify-center" aria-hidden="true">
                 {itemCount}
               </span>
             )}
