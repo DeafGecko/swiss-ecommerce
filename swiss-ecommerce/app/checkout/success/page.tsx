@@ -24,20 +24,15 @@ export default function SuccessPage() {
 
     // Save order first, then clear the cart
     try {
-      const cartItems = JSON.parse(localStorage.getItem('cart-storage') || '{"state":{"items":[]}}')
-      const items = cartItems.state?.items || []
+      interface CartItem { name: string; quantity: number; price: number }
+      const cartData = JSON.parse(localStorage.getItem('cart-storage') ?? '{"state":{"items":[]}}')
+      const items: CartItem[] = cartData.state?.items ?? []
 
+      const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0)
       const order = {
-        id: id,
-        items: items.map((item: any) => ({
-          name: item.name,
-          quantity: item.quantity,
-          price: item.price,
-        })),
-        total: items.reduce(
-          (sum: number, item: any) => sum + item.price * item.quantity,
-          0
-        ) * 1.08,
+        id,
+        items: items.map(({ name, quantity, price }) => ({ name, quantity, price })),
+        total: subtotal * 1.08,
         date: new Date().toISOString(),
       }
 

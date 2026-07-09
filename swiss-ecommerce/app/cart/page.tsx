@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { useCartStore } from '@/store/cartStore'
-import { Trash2, Plus, Minus } from 'lucide-react'
+import { Trash2, Plus, Minus, Image as ImageIcon } from 'lucide-react'
 import { toast } from 'react-hot-toast'
 
 export default function CartPage() {
@@ -81,7 +81,7 @@ export default function CartPage() {
                 className="flex items-center gap-4 p-4 border border-[var(--color-border)] rounded-lg hover:border-[var(--color-border-dark)] transition-colors"
               >
                 <div className="w-16 h-16 bg-[var(--color-background-alt)] border border-[var(--color-border)] rounded flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl" aria-hidden="true">📷</span>
+                  <ImageIcon size={20} className="text-[var(--color-text-muted)]" aria-hidden="true" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-mono text-sm truncate">{item.name}</h3>

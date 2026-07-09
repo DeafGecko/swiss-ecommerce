@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { ShoppingCart, Heart, Menu } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { PhaseSwitcher } from './PhaseSwitcher'
@@ -37,7 +38,7 @@ export function Header() {
       <div className="container mx-auto px-3 sm:px-4 h-14 sm:h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-mono text-base sm:text-xl font-bold tracking-tight">
-          <img src="/favicon.svg" alt="Monochrome logo" width={28} height={28} className="rounded-md" />
+          <Image src="/logo.svg" alt="Monochrome logo" width={28} height={28} className="rounded-md" />
           <span>MONOCHROME</span>
         </Link>
 
@@ -60,7 +61,7 @@ export function Header() {
         {/* Right side icons */}
         <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
           <Link href="/wishlist" className="relative p-1.5">
-            <Heart size={18} className="sm:w-4 sm:h-4 md:w-5 md:h-5" />
+            <Heart size={18} />
             {isMounted && wishlistCount > 0 && (
               <span className="absolute -top-1 -right-1 bg-[var(--color-primary)] text-[var(--color-text-inverse)] text-[10px] font-mono w-4 h-4 rounded-full flex items-center justify-center">
                 {wishlistCount}
@@ -69,7 +70,7 @@ export function Header() {
           </Link>
 
           <Link href="/cart" className="relative p-1.5">
-            <ShoppingCart size={18} className="sm:w-4 sm:h-4 md:w-5 md:h-5" />
+            <ShoppingCart size={18} />
             {isMounted && itemCount > 0 && (
               <span className="absolute -top-1 -right-1 bg-[var(--color-primary)] text-[var(--color-text-inverse)] text-[10px] font-mono w-4 h-4 rounded-full flex items-center justify-center">
                 {itemCount}

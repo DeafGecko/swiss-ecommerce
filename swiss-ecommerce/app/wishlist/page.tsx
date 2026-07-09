@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useWishlistStore } from '@/store/wishlistStore'
 import { useCartStore } from '@/store/cartStore'
-import { Heart, ShoppingCart } from 'lucide-react'
+import { Heart, ShoppingCart, Image as ImageIcon } from 'lucide-react'
 import { toast } from 'react-hot-toast'
 
 export default function WishlistPage() {
@@ -42,7 +42,7 @@ export default function WishlistPage() {
           <div key={item.id} className="border border-[var(--color-border)] rounded-lg overflow-hidden hover:shadow-[var(--box-shadow-hover)] transition-all">
             <Link href={`/product/${item.productId}`} tabIndex={-1} aria-hidden="true">
               <div className="aspect-square bg-[var(--color-background-alt)] flex items-center justify-center">
-                <span className="text-2xl" aria-hidden="true">📷</span>
+                <ImageIcon size={20} className="text-[var(--color-text-muted)]" aria-hidden="true" />
               </div>
             </Link>
             <div className="p-3">

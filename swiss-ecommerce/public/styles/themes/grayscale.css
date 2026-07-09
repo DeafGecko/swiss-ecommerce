@@ -32,8 +32,8 @@
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
   --border-radius-lg: 12px;
-  --font-family-primary: 'Inter', -apple-system, sans-serif;
-  --font-family-mono: 'JetBrains Mono', monospace;
+  --font-family-primary: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-family-mono: 'IBM Plex Mono', ui-monospace, monospace;
   --transition-duration: 200ms;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
   --box-shadow: 0 2px 8px var(--color-shadow);

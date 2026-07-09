@@ -53,7 +53,7 @@ export default async function HomePage() {
                 POPULAR
               </h2>
               <div className="flex gap-3 sm:gap-4 overflow-x-auto pb-3 sm:pb-4">
-                {popular.map((product: any) => (
+                {popular.map((product) => (
                   <Link key={product.id} href={`/product/${product.id}`} className="flex-shrink-0 w-16 sm:w-20 md:w-24 text-center group">
                     <div className="aspect-square bg-[var(--color-background-alt)] border border-[var(--color-border)] group-hover:border-[var(--color-border-dark)] rounded-full flex items-center justify-center transition-colors" aria-hidden="true">
                       <ImageIcon size={14} className="text-[var(--color-text-muted)]" aria-hidden="true" />

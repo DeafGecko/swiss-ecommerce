@@ -32,7 +32,7 @@ export function Footer() {
             <a href="/privacy" className="hover:underline">Privacy</a>
           </nav>
           <small className="text-[10px] sm:text-xs text-[var(--color-text-muted)]">
-            © 2024 Monochrome Studio
+            Copyright © 2024 09 Labs
           </small>
         </div>
       </div>

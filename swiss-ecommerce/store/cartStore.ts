@@ -26,30 +26,27 @@ export const useCartStore = create<CartStore>()(
       items: [],
 
       addItem: (product) => {
-        const existing = get().items.find((item) => item.productId === product.id)
-        if (existing) {
-          set({
-            items: get().items.map((item) =>
-              item.productId === product.id
-                ? { ...item, quantity: item.quantity + 1 }
-                : item
-            ),
-          })
-        } else {
-          set({
-            items: [
-              ...get().items,
-              {
-                id: crypto.randomUUID(),
-                productId: product.id,
-                name: product.name,
-                price: product.price,
-                quantity: 1,
-                image: product.image,
-              },
-            ],
-          })
-        }
+        const items = get().items
+        const exists = items.some((item) => item.productId === product.id)
+        set({
+          items: exists
+            ? items.map((item) =>
+                item.productId === product.id
+                  ? { ...item, quantity: item.quantity + 1 }
+                  : item
+              )
+            : [
+                ...items,
+                {
+                  id: crypto.randomUUID(),
+                  productId: product.id,
+                  name: product.name,
+                  price: product.price,
+                  quantity: 1,
+                  image: product.image,
+                },
+              ],
+        })
       },
 
       removeItem: (productId) => {

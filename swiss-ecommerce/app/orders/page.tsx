@@ -95,7 +95,7 @@ export default function OrdersPage() {
         {orders.map((order) => {
           const isExpanded = expanded.has(order.id)
           const subtotal = order.items.reduce((s, i) => s + i.price * i.quantity, 0)
-          const tax = order.total - subtotal
+          const tax = subtotal * 0.08
 
           return (
             <div
