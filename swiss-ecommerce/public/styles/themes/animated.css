@@ -1,0 +1,58 @@
+:root {
+  --color-primary: #0f766e;
+  --color-primary-hover: #115e59;
+  --color-background: #f0fdfa;
+  --color-background-alt: #ccfbf1;
+  --color-text: #134e4a;
+  --color-text-secondary: #0f766e;
+  --color-text-muted: #0d9488;
+  --color-text-inverse: #ffffff;
+  --color-border: #99f6e4;
+  --color-border-light: #bff9ee;
+  --color-border-dark: #5eead4;
+  --color-shadow: rgba(15, 118, 110, 0.12);
+  --color-shadow-hover: rgba(15, 118, 110, 0.22);
+
+  --spacing-xs: clamp(0.25rem, 0.5vw, 0.5rem);
+  --spacing-sm: clamp(0.5rem, 1vw, 1rem);
+  --spacing-md: clamp(1rem, 2vw, 1.5rem);
+  --spacing-lg: clamp(1.5rem, 3vw, 2.5rem);
+  --spacing-xl: clamp(2rem, 4vw, 3.5rem);
+  --spacing-2xl: clamp(3rem, 6vw, 4.5rem);
+
+  --font-size-xs: clamp(0.625rem, 1vw, 0.75rem);
+  --font-size-sm: clamp(0.75rem, 1.25vw, 0.875rem);
+  --font-size-base: clamp(0.875rem, 1.5vw, 1rem);
+  --font-size-lg: clamp(1rem, 2vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 2.5vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 3vw, 2rem);
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --font-family-primary: 'Inter', -apple-system, sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+  --transition-duration: 200ms;
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --box-shadow: 0 2px 8px var(--color-shadow);
+  --box-shadow-hover: 0 8px 24px var(--color-shadow-hover);
+
+  --z-dropdown: 1000;
+  --z-modal: 2000;
+  --z-header: 100;
+  --z-overlay: 1500;
+  --z-tooltip: 500;
+  --z-max: 9999;
+
+  /* Phase 3 feel: subtle, global animated accents */
+  --animated-accent: shimmer 6s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
