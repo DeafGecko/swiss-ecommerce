@@ -61,11 +61,11 @@ export default async function HomePage() {
                   Shop the Collection
                 </a>
               </div>
-              <div className="aspect-video rounded-2xl overflow-hidden pr-8 md:pr-12">
+              <div className="aspect-video md:pr-6">
                 <img
                   src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
                   alt="Monolith — minimalist interior"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-2xl"
                 />
               </div>
             </div>
