@@ -17,38 +17,54 @@ export default async function HomePage() {
     <div className="min-h-screen">
 {/* Hero Section */}
         <section className="container mx-auto px-3 sm:px-4 md:px-6 py-6 sm:py-8 md:py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
-            <div className="order-2 md:order-1">
-              <h1 className="font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                <span className="phase-name-p1">Swiss Industrial</span>
-                <span className="phase-name-p2">Monolith</span>
-              </h1>
-              <p className="text-[var(--color-text-secondary)] text-lg sm:text-xl md:text-2xl font-mono mt-1">
-                <span className="phase-name-p1">Objects built to last.</span>
-                <span className="phase-name-p2">Where form meets function.</span>
-              </p>
-              <p className="text-[var(--color-text-secondary)] mt-3 sm:mt-4 text-sm sm:text-base max-w-md leading-relaxed">
-                <span className="phase-name-p1">Industrial-grade home and office goods. No ornamentation. No compromise. Just the object, done right.</span>
-                <span className="phase-name-p2">A curated collection of objects designed to bring quiet precision to your home and workspace. Each piece selected for craftsmanship, longevity, and restraint.</span>
-              </p>
-              <a
-                href="#all-products"
-                className="inline-block mt-3 sm:mt-4 md:mt-6 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-[var(--color-primary)] text-[var(--color-text-inverse)] font-mono text-xs sm:text-sm hover:bg-[var(--color-primary-hover)] transition-colors"
-              >
-                <span className="phase-name-p1">Browse Collection →</span>
-                <span className="phase-name-p2">Shop the Collection →</span>
-              </a>
+          {/* Phase 1 hero — two column layout */}
+          <div className="phase-name-p1">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
+              <div>
+                <h1 className="font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                  Swiss Industrial
+                </h1>
+                <p className="text-[var(--color-text-secondary)] text-lg sm:text-xl font-mono mt-1">
+                  Objects built to last.
+                </p>
+                <p className="text-[var(--color-text-secondary)] mt-3 text-sm sm:text-base max-w-md leading-relaxed">
+                  Industrial-grade home and office goods. No ornamentation. No compromise. Just the object, done right.
+                </p>
+                <a href="#all-products" className="inline-block mt-6 px-5 py-2.5 bg-[var(--color-primary)] text-[var(--color-text-inverse)] font-mono text-xs sm:text-sm hover:bg-[var(--color-primary-hover)] transition-colors">
+                  Browse Collection →
+                </a>
+              </div>
+              <div className="aspect-video rounded-lg overflow-hidden border border-dashed border-[var(--color-border)] flex items-center justify-center text-[var(--color-text-muted)] text-sm bg-[var(--color-background-alt)]">
+                Hero Image
+              </div>
             </div>
-            
-            <div className="order-1 md:order-2 aspect-video rounded-lg overflow-hidden border border-[var(--color-border)] relative bg-[var(--color-background-alt)]">
+          </div>
+
+          {/* Phase 2 & 3 hero — centered editorial layout */}
+          <div className="phase-name-p2 text-center max-w-2xl mx-auto py-8 sm:py-12">
+            <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-[var(--color-text)] text-[var(--color-text-inverse)] mb-6 rounded-sm" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '2.5rem', fontWeight: 400 }}>
+              M
+            </div>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold leading-none" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
+              Monolith
+            </h1>
+            <p className="mt-4 text-xs sm:text-sm tracking-[0.25em] uppercase text-[var(--color-text-secondary)]" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
+              Where Form Meets Function.
+            </p>
+            <div className="w-10 h-px bg-[var(--color-text-secondary)] mx-auto my-5" />
+            <p className="text-sm sm:text-base text-[var(--color-text-secondary)] leading-relaxed max-w-md mx-auto" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
+              A curated collection of objects designed to bring quiet precision to your home and workspace. Each piece selected for craftsmanship, longevity, and restraint.
+            </p>
+            <a href="#all-products" className="inline-block mt-6 px-8 py-3 bg-[var(--color-primary)] text-[var(--color-text-inverse)] text-sm tracking-widest uppercase hover:bg-[var(--color-primary-hover)] transition-colors" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
+              Shop the Collection
+            </a>
+
+            <div className="mt-10 aspect-video rounded-lg overflow-hidden border border-[var(--color-border)]">
               <img
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
                 alt="Monolith — minimalist interior"
-                className="phase-image w-full h-full object-cover"
+                className="w-full h-full object-cover"
               />
-              <div className="phase-image-placeholder absolute inset-0 flex items-center justify-center text-[var(--color-text-muted)] text-sm border border-dashed border-[var(--color-border)]">
-                Hero Image
-              </div>
             </div>
           </div>
 

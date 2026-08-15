@@ -38,7 +38,10 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 tracking-tight">
           <span className="phase-name-p1 font-mono text-base sm:text-xl font-bold">SWISS</span>
-          <span className="phase-name-p2 text-xl sm:text-2xl font-semibold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", letterSpacing: '0.08em' }}>Monolith</span>
+          <span className="phase-name-p2 flex items-center gap-2">
+            <span className="inline-flex items-center justify-center w-7 h-7 bg-[#1a1a1a] text-white text-base rounded-sm" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 400 }}>M</span>
+            <span className="text-xl sm:text-2xl font-semibold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", letterSpacing: '0.08em' }}>Monolith</span>
+          </span>
         </Link>
 
         {/* Mobile menu toggle */}
