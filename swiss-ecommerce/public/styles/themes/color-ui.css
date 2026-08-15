@@ -61,11 +61,11 @@ body[data-phase="color"] li {
   font-family: 'Inter', system-ui, sans-serif;
 }
 
-/* Phase 2 — brand logo and name color */
-body[data-phase="color"] .phase-name-p2 .brand-icon {
+/* Phase 2 — brand logo and name color (header + hero) */
+body[data-phase="color"] .brand-icon {
   background-color: #1e3a5f !important;
 }
-body[data-phase="color"] .phase-name-p2 .brand-name {
+body[data-phase="color"] .brand-name {
   color: #1e3a5f;
 }
 

@@ -63,11 +63,11 @@ body[data-phase="animated"] li {
   font-family: 'Inter', system-ui, sans-serif;
 }
 
-/* ─── Phase 3: brand logo and name color ─── */
-body[data-phase="animated"] .phase-name-p2 .brand-icon {
+/* ─── Phase 3: brand logo and name color (header + hero) ─── */
+body[data-phase="animated"] .brand-icon {
   background-color: #064e3b !important;
 }
-body[data-phase="animated"] .phase-name-p2 .brand-name {
+body[data-phase="animated"] .brand-name {
   color: #064e3b;
 }
 

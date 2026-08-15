@@ -44,10 +44,10 @@ export default async function HomePage() {
           <div className="phase-name-p2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="flex flex-col items-center text-center gap-4">
-                <div className="flex items-center justify-center w-14 h-14 bg-[var(--color-text)] text-[var(--color-text-inverse)] rounded-sm flex-shrink-0" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '2rem', fontWeight: 400 }}>
+                <div className="brand-icon flex items-center justify-center w-14 h-14 bg-[#1a1a1a] text-white rounded-lg flex-shrink-0" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '2rem', fontWeight: 400 }}>
                   M
                 </div>
-                <h1 className="text-5xl sm:text-6xl font-semibold leading-none" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
+                <h1 className="brand-name text-5xl sm:text-6xl font-semibold leading-none" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
                   Monolith
                 </h1>
                 <p className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-secondary)]" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
@@ -61,7 +61,7 @@ export default async function HomePage() {
                   Shop the Collection
                 </a>
               </div>
-              <div className="aspect-video rounded-2xl overflow-hidden">
+              <div className="aspect-video rounded-2xl overflow-hidden pr-8 md:pr-12">
                 <img
                   src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
                   alt="Monolith — minimalist interior"
