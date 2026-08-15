@@ -7,7 +7,7 @@ import { toast } from 'react-hot-toast'
 import { useEffect, useState } from 'react'
 
 interface Props {
-  product: { id: string; name: string; price: number }
+  product: { id: string; name: string; price: number; image?: string }
 }
 
 export function ProductActions({ product }: Props) {
@@ -38,7 +38,7 @@ export function ProductActions({ product }: Props) {
         type="button"
         aria-label={wishlisted ? `Remove ${product.name} from wishlist` : `Save ${product.name} to wishlist`}
         onClick={() => {
-          toggleItem({ id: product.id, name: product.name, price: product.price })
+          toggleItem({ id: product.id, name: product.name, price: product.price, image: product.image })
           setWishlisted(!wishlisted)
           toast.success(wishlisted ? 'Removed from wishlist' : 'Saved to wishlist!')
         }}
