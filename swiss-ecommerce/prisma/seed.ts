@@ -13,7 +13,7 @@ async function main() {
       price: product.price,
       category: product.category,
       isPopular: product.isPopular || false,
-      images: [`/images/products/${product.sku}-main.jpg`],
+      images: [product.image || `/images/products/${product.sku}-main.jpg`],
       metadata: { hasVideo: product.hasVideo || false },
     }
     await prisma.product.upsert({

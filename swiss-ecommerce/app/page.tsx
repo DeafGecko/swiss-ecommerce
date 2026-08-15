@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import { ProductGrid } from '@/components/ProductGrid'
-import { Image as ImageIcon } from 'lucide-react'
 
 export default async function HomePage() {
   const products = await prisma.product.findMany({
@@ -37,12 +36,12 @@ export default async function HomePage() {
               </a>
             </div>
             
-            <div
-              className="order-1 md:order-2 aspect-video bg-[var(--color-background-alt)] border border-[var(--color-border)] rounded-lg flex items-center justify-center"
-              role="img"
-              aria-label="Monochrome Studio hero image"
-            >
-              <span className="text-[var(--color-text-muted)] text-sm" aria-hidden="true">Hero Image</span>
+            <div className="order-1 md:order-2 aspect-video rounded-lg overflow-hidden border border-[var(--color-border)]">
+              <img
+                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
+                alt="Monochrome Studio — minimalist interior"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
@@ -55,8 +54,12 @@ export default async function HomePage() {
               <div className="flex gap-3 sm:gap-4 overflow-x-auto pb-3 sm:pb-4">
                 {popular.map((product) => (
                   <Link key={product.id} href={`/product/${product.id}`} className="flex-shrink-0 w-16 sm:w-20 md:w-24 text-center group">
-                    <div className="aspect-square bg-[var(--color-background-alt)] border border-[var(--color-border)] group-hover:border-[var(--color-border-dark)] rounded-full flex items-center justify-center transition-colors" aria-hidden="true">
-                      <ImageIcon size={14} className="text-[var(--color-text-muted)]" aria-hidden="true" />
+                    <div className="aspect-square bg-[var(--color-background-alt)] border border-[var(--color-border)] group-hover:border-[var(--color-border-dark)] rounded-full overflow-hidden transition-colors">
+                      {product.images[0] ? (
+                        <img src={product.images[0]} alt={product.name} className="w-full h-full object-cover" />
+                      ) : (
+                        <div className="w-full h-full" aria-hidden="true" />
+                      )}
                     </div>
                     <p className="text-[10px] sm:text-xs mt-1 sm:mt-2 truncate group-hover:underline">{product.name}</p>
                   </Link>
