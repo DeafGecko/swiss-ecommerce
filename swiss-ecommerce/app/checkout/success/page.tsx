@@ -1,17 +1,16 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import Link from 'next/link'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useCartStore } from '@/store/cartStore'
 import { CheckCircle } from 'lucide-react'
 import { toast } from 'react-hot-toast'
 
-export default function SuccessPage() {
+function SuccessContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const [sessionId, setSessionId] = useState<string | null>(null)
-  const [orderSaved, setOrderSaved] = useState(false)
   const clearCart = useCartStore((state) => state.clearCart)
 
   useEffect(() => {
@@ -22,7 +21,6 @@ export default function SuccessPage() {
     }
     setSessionId(id)
 
-    // Save order first, then clear the cart
     try {
       interface CartItem { name: string; quantity: number; price: number }
       const cartData = JSON.parse(localStorage.getItem('cart-storage') ?? '{"state":{"items":[]}}')
@@ -36,19 +34,16 @@ export default function SuccessPage() {
         date: new Date().toISOString(),
       }
 
-      // Get existing orders, skip if this session was already saved
       const existingOrders = JSON.parse(localStorage.getItem('mock-orders') || '[]')
       if (!existingOrders.some((o: { id: string }) => o.id === id)) {
         existingOrders.push(order)
         localStorage.setItem('mock-orders', JSON.stringify(existingOrders))
-        setOrderSaved(true)
         toast.success('Order saved successfully!')
       }
     } catch (error) {
       console.error('Failed to save order:', error)
     }
 
-    // Clear the cart after saving the order
     clearCart()
   }, [searchParams, router, clearCart])
 
@@ -83,5 +78,13 @@ export default function SuccessPage() {
         </Link>
       </div>
     </div>
+  )
+}
+
+export default function SuccessPage() {
+  return (
+    <Suspense fallback={<div className="container mx-auto px-4 py-16 text-center">Loading...</div>}>
+      <SuccessContent />
+    </Suspense>
   )
 }
