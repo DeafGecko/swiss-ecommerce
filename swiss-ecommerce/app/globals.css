@@ -83,3 +83,7 @@ body {
 /* Default: hide images (Phase 1 wireframe) until a phase is loaded */
 .phase-image { display: none; }
 .phase-image-placeholder { display: flex; }
+
+/* Default brand name state before phase loads */
+.phase-name-p1 { display: inline; }
+.phase-name-p2 { display: none; }
