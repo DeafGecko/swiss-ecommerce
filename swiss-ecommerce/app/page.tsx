@@ -65,7 +65,7 @@ export default async function HomePage() {
                 <img
                   src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
                   alt="Monolith — minimalist interior"
-                  className="w-full h-auto object-cover rounded-2xl"
+                  className="w-full h-auto object-cover rounded-2xl hero-image"
                 />
               </div>
             </div>
