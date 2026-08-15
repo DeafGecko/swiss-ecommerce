@@ -16,7 +16,7 @@ export function Footer() {
             <a href="/privacy" className="hover:underline">Privacy</a>
           </nav>
           <small className="text-[10px] sm:text-xs text-[var(--color-text-muted)]">
-            Copyright © 2026 09 Labs
+            Copyright © 2026 <a href="https://github.com/DeafGecko" target="_blank" rel="noopener noreferrer" className="hover:underline">09 Labs</a>
           </small>
         </div>
       </div>
