@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client'
-import products from './seed-data.json'
+import products from './seed-data.json' with { type: 'json' }
 
 const prisma = new PrismaClient()
 
