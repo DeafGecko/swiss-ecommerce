@@ -20,19 +20,23 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
             <div className="order-2 md:order-1">
               <h1 className="font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                <span className="phase-name-p1">Swiss Industrial</span><span className="phase-name-p2">Monolith</span><br />
-                <span className="text-[var(--color-text-secondary)] text-lg sm:text-xl md:text-2xl lg:text-3xl">
-                  Minimalist Design
-                </span>
+                <span className="phase-name-p1">Swiss Industrial</span>
+                <span className="phase-name-p2">Monolith</span>
               </h1>
-              <p className="text-[var(--color-text-secondary)] mt-2 sm:mt-3 md:mt-4 text-sm sm:text-base max-w-md">
-                Precision-crafted products for the modern minimalist.
+              <p className="text-[var(--color-text-secondary)] text-lg sm:text-xl md:text-2xl font-mono mt-1">
+                <span className="phase-name-p1">Objects built to last.</span>
+                <span className="phase-name-p2">Where form meets function.</span>
+              </p>
+              <p className="text-[var(--color-text-secondary)] mt-3 sm:mt-4 text-sm sm:text-base max-w-md leading-relaxed">
+                <span className="phase-name-p1">Industrial-grade home and office goods. No ornamentation. No compromise. Just the object, done right.</span>
+                <span className="phase-name-p2">A curated collection of objects designed to bring quiet precision to your home and workspace. Each piece selected for craftsmanship, longevity, and restraint.</span>
               </p>
               <a
                 href="#all-products"
                 className="inline-block mt-3 sm:mt-4 md:mt-6 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-[var(--color-primary)] text-[var(--color-text-inverse)] font-mono text-xs sm:text-sm hover:bg-[var(--color-primary-hover)] transition-colors"
               >
-                Explore Collection
+                <span className="phase-name-p1">Browse Collection →</span>
+                <span className="phase-name-p2">Shop the Collection →</span>
               </a>
             </div>
             
