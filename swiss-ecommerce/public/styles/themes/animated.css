@@ -48,6 +48,15 @@
   --z-max: 9999;
 }
 
+/* ─── Phase 3: Fraunces for headings ─── */
+body[data-phase="animated"] h1,
+body[data-phase="animated"] h2,
+body[data-phase="animated"] h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
 /* ─── Phase 3: brand name ─── */
 body[data-phase="animated"] .phase-name-p1 { display: none; }
 body[data-phase="animated"] .phase-name-p2 { display: inline; }

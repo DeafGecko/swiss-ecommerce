@@ -16,6 +16,7 @@ export function PhaseSwitcher() {
 
   const loadTheme = useCallback((themeId: string) => {
     document.querySelectorAll('link[data-theme]').forEach((el) => el.remove())
+    document.querySelectorAll('link[data-font]').forEach((el) => el.remove())
     const phase = PHASES.find((p) => p.id === themeId)
     if (!phase) return
     const link = document.createElement('link')
@@ -23,6 +24,13 @@ export function PhaseSwitcher() {
     link.href = phase.file
     link.dataset.theme = themeId
     document.head.appendChild(link)
+    if (themeId === 'color' || themeId === 'animated') {
+      const font = document.createElement('link')
+      font.rel = 'stylesheet'
+      font.href = 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&display=swap'
+      font.dataset.font = 'fraunces'
+      document.head.appendChild(font)
+    }
     document.body.dataset.phase = themeId
     setActive(themeId)
     localStorage.setItem('theme-preference', themeId)
