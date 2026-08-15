@@ -40,31 +40,34 @@ export default async function HomePage() {
             </div>
           </div>
 
-          {/* Phase 2 & 3 hero — centered editorial layout */}
-          <div className="phase-name-p2 text-center max-w-2xl mx-auto py-8 sm:py-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-[var(--color-text)] text-[var(--color-text-inverse)] mb-6 rounded-sm" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '2.5rem', fontWeight: 400 }}>
-              M
-            </div>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold leading-none" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
-              Monolith
-            </h1>
-            <p className="mt-4 text-xs sm:text-sm tracking-[0.25em] uppercase text-[var(--color-text-secondary)]" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
-              Where Form Meets Function.
-            </p>
-            <div className="w-10 h-px bg-[var(--color-text-secondary)] mx-auto my-5" />
-            <p className="text-sm sm:text-base text-[var(--color-text-secondary)] leading-relaxed max-w-md mx-auto" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
-              A curated collection of objects designed to bring quiet precision to your home and workspace. Each piece selected for craftsmanship, longevity, and restraint.
-            </p>
-            <a href="#all-products" className="inline-block mt-6 px-8 py-3 bg-[var(--color-primary)] text-[var(--color-text-inverse)] text-sm tracking-widest uppercase hover:bg-[var(--color-primary-hover)] transition-colors" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
-              Shop the Collection
-            </a>
-
-            <div className="mt-10 aspect-video rounded-lg overflow-hidden border border-[var(--color-border)]">
-              <img
-                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
-                alt="Monolith — minimalist interior"
-                className="w-full h-full object-cover"
-              />
+          {/* Phase 2 & 3 hero — two column: text left, image right */}
+          <div className="phase-name-p2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="flex flex-col items-start gap-4">
+                <div className="flex items-center justify-center w-14 h-14 bg-[var(--color-text)] text-[var(--color-text-inverse)] rounded-sm flex-shrink-0" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '2rem', fontWeight: 400 }}>
+                  M
+                </div>
+                <h1 className="text-5xl sm:text-6xl font-semibold leading-none" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
+                  Monolith
+                </h1>
+                <p className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-secondary)]" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
+                  Where Form Meets Function.
+                </p>
+                <div className="w-10 h-px bg-[var(--color-text-secondary)]" />
+                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed max-w-sm" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
+                  A curated collection of objects designed to bring quiet precision to your home and workspace. Each piece selected for craftsmanship, longevity, and restraint.
+                </p>
+                <a href="#all-products" className="inline-block px-8 py-3 bg-[var(--color-primary)] text-[var(--color-text-inverse)] text-xs tracking-widest uppercase hover:bg-[var(--color-primary-hover)] transition-colors" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
+                  Shop the Collection
+                </a>
+              </div>
+              <div className="aspect-video rounded-2xl overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
+                  alt="Monolith — minimalist interior"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
 
