@@ -61,6 +61,14 @@ body[data-phase="color"] li {
   font-family: 'Inter', system-ui, sans-serif;
 }
 
+/* Phase 2 — brand logo and name color */
+body[data-phase="color"] .phase-name-p2 .brand-icon {
+  background-color: #1e3a5f !important;
+}
+body[data-phase="color"] .phase-name-p2 .brand-name {
+  color: #1e3a5f;
+}
+
 /* Phase 2 — Inter for all header nav and links */
 body[data-phase="color"] header nav a,
 body[data-phase="color"] header button {

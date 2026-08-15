@@ -39,8 +39,8 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2 tracking-tight">
           <span className="phase-name-p1 font-mono text-base sm:text-xl font-bold">SWISS</span>
           <span className="phase-name-p2 flex items-center gap-3">
-            <span className="inline-flex items-center justify-center w-8 h-8 bg-[#1a1a1a] text-white rounded-sm flex-shrink-0" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '1.1rem', fontWeight: 400, lineHeight: 1 }}>M</span>
-            <span className="text-xl sm:text-2xl font-semibold leading-none" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", letterSpacing: '0.06em' }}>Monolith</span>
+            <span className="brand-icon inline-flex items-center justify-center w-8 h-8 bg-[#1a1a1a] text-white rounded-sm flex-shrink-0" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '1.1rem', fontWeight: 400, lineHeight: 1 }}>M</span>
+            <span className="brand-name text-xl sm:text-2xl font-semibold leading-none" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", letterSpacing: '0.06em' }}>Monolith</span>
           </span>
         </Link>
 
