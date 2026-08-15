@@ -28,14 +28,17 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
         {/* Image */}
         <div className="aspect-square bg-[var(--color-background-alt)] border border-[var(--color-border)] rounded-lg overflow-hidden relative">
-          <img
-            src={product.images[0] ?? ''}
-            alt={product.name}
-            className="phase-image w-full h-full object-cover"
-          />
-          <div className="phase-image-placeholder absolute inset-0 flex items-center justify-center text-[var(--color-text-muted)] text-sm border border-dashed border-[var(--color-border)]">
-            {product.name}
-          </div>
+          {product.images[0] ? (
+            <img
+              src={product.images[0]}
+              alt={product.name}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center text-[var(--color-text-muted)] text-sm border border-dashed border-[var(--color-border)]">
+              {product.name}
+            </div>
+          )}
         </div>
 
         {/* Details */}
