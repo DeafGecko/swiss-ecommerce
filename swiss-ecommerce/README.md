@@ -1,103 +1,89 @@
-# Monochrome Studio — Swiss E-Commerce
+# Monochrome Studio
 
-A minimalist e-commerce storefront built with Next.js 16, Prisma, and Neon PostgreSQL. Deployed on Vercel.
+A clean, minimal online store built as a portfolio project.
 
 **Live site:** https://swiss-ecommerce.vercel.app
 
 ---
 
-## Tech Stack
+## What It Does
 
-- **Framework:** Next.js 16 (App Router, Turbopack)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS + CSS custom properties
-- **Database:** Neon PostgreSQL via Prisma ORM
-- **State:** Zustand (cart, wishlist)
-- **Deployment:** Vercel
+This is a fully working e-commerce store. You can browse products, add them to your cart, save items to a wishlist, and check out. Products are stored in a real database.
 
 ---
 
-## Phase System
+## The Three Phases
 
-The site has a three-phase design switcher (top-right corner):
+The store has a phase switcher in the top-right corner. Each phase shows a different version of the design.
 
-| Phase | Theme | Images | Animations |
-|-------|-------|--------|------------|
-| Phase 1 | Grayscale | No (wireframe placeholders) | No |
-| Phase 2 | Color | Yes (Unsplash) | No |
-| Phase 3 | Animated | Yes (Unsplash) | Yes (hover zoom, transitions) |
+**Phase 1 — Wireframe**
+No photos. Just boxes and text. This shows the layout and structure before any visuals are added.
 
-Theme preference is saved to `localStorage`.
+**Phase 2 — Color**
+Photos appear. The color scheme changes to blue. This is the full visual design.
+
+**Phase 3 — Animated**
+Same as Phase 2, but images zoom in when you hover over them. Colors shift to teal green.
+
+The site remembers which phase you picked the next time you visit.
 
 ---
 
 ## Pages
 
-| Route | Description |
-|-------|-------------|
-| `/` | Homepage — hero, popular products, full product grid |
-| `/products` | All products with category filter |
-| `/product/[id]` | Product detail — image, description, add to cart/wishlist |
-| `/cart` | Shopping cart with quantity controls |
-| `/wishlist` | Saved products |
-| `/orders` | Order history (localStorage) |
-| `/checkout/success` | Order confirmation after Stripe checkout |
-| `/checkout/cancel` | Cancelled checkout redirect |
-| `/about` | About page |
-| `/contact` | Contact form |
-| `/privacy` | Privacy policy |
+- **Home** — Hero image, popular products, and the full product grid
+- **Products** — Browse all 34 products, filter by category
+- **Product Page** — Photo, description, price, add to cart or wishlist
+- **Cart** — Review items, update quantities, go to checkout
+- **Wishlist** — Saved products you want to come back to
+- **Orders** — Your past orders
+- **About** — About the store
+- **Contact** — Send a message
 
 ---
 
-## Product Data
+## Built With
 
-34 products seeded into Neon PostgreSQL via `prisma/seed.ts`.  
-Images sourced from Unsplash (stored as URLs in the `images` field).
-
-To reseed:
-```bash
-npx ts-node prisma/seed.ts
-```
+- **Next.js 16** — The React framework that powers the site
+- **TypeScript** — Keeps the code reliable and catches errors early
+- **Tailwind CSS** — Handles all the styling
+- **Prisma + Neon** — The database where products are stored
+- **Zustand** — Manages the cart and wishlist in the browser
+- **Vercel** — Where the site is hosted and deployed
 
 ---
 
-## Local Development
+## Running It Locally
 
 ```bash
-# Install dependencies
+# 1. Install packages
 npm install
 
-# Set up environment variables
-cp .env.example .env
-# Add DATABASE_URL and DIRECT_URL from Neon console
+# 2. Add your database credentials to .env
+DATABASE_URL="your-neon-pooled-url"
+DIRECT_URL="your-neon-direct-url"
 
-# Push schema to database
+# 3. Push the schema to the database
 npx prisma db push
 
-# Seed products
+# 4. Seed the 34 products
 npx ts-node prisma/seed.ts
 
-# Start dev server
+# 5. Start the dev server
 npm run dev
 ```
 
 ---
 
-## Environment Variables
+## Deploying to Vercel
 
-| Variable | Description |
-|----------|-------------|
-| `DATABASE_URL` | Neon pooled connection string |
-| `DIRECT_URL` | Neon direct connection string (migrations) |
-
-Set both in Vercel → Settings → Environment Variables.
+1. Push to GitHub
+2. Connect the repo in Vercel
+3. Add `DATABASE_URL` and `DIRECT_URL` in Vercel → Settings → Environment Variables
+4. Vercel builds and deploys automatically on every push
 
 ---
 
-## Build
+## Product Images
 
-```bash
-npm run build   # prisma generate + next build
-npm run lint    # ESLint v10
-npx tsc --noEmit  # TypeScript check
-```
+All 34 product photos come from Unsplash. They load as URLs — no image files are stored in the project.
