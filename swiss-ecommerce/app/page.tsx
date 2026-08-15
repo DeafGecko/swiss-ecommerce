@@ -61,7 +61,7 @@ export default async function HomePage() {
                   Shop the Collection
                 </a>
               </div>
-              <div className="md:pr-6 rounded-2xl overflow-hidden">
+              <div className="hero-frame md:pr-6 rounded-2xl overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
                   alt="Monolith — minimalist interior"

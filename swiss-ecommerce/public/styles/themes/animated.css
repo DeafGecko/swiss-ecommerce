@@ -91,15 +91,13 @@ body[data-phase="animated"] .phase-image-placeholder {
   display: none;
 }
 
-/* ─── Hero image: slow zoom-in on load ─── */
+/* ─── Hero image: zoom on hover only ─── */
 body[data-phase="animated"] .hero-image {
-  animation: heroZoom 8s ease-out forwards;
-  transform-origin: center center;
+  transition: transform 1.2s ease;
+  transform: scale(1);
 }
-
-@keyframes heroZoom {
-  from { transform: scale(1); }
-  to   { transform: scale(1.12); }
+body[data-phase="animated"] .hero-frame:hover .hero-image {
+  transform: scale(1.1);
 }
 
 /* ─── Image zoom on hover — only in rectangular containers, not circles ─── */
