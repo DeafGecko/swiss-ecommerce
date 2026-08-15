@@ -43,7 +43,7 @@ export default async function HomePage() {
           {/* Phase 2 & 3 hero — two column: text left, image right */}
           <div className="phase-name-p2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="flex flex-col items-start gap-4">
+              <div className="flex flex-col items-center text-center gap-4">
                 <div className="flex items-center justify-center w-14 h-14 bg-[var(--color-text)] text-[var(--color-text-inverse)] rounded-sm flex-shrink-0" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '2rem', fontWeight: 400 }}>
                   M
                 </div>
