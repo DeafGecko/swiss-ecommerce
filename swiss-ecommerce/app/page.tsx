@@ -58,7 +58,7 @@ export default async function HomePage() {
                 {popular.map((product) => (
                   <Link key={product.id} href={`/product/${product.id}`} className="flex-shrink-0 w-20 sm:w-24 md:w-28 text-center group">
                     <div className="aspect-square bg-[var(--color-background-alt)] border border-[var(--color-border)] group-hover:border-[var(--color-border-dark)] rounded-full overflow-hidden transition-colors relative">
-                      <img src={product.images[0] ?? ''} alt={product.name} className="phase-image w-full h-full object-cover object-center scale-110" />
+                      <img src={product.images[0] ?? ''} alt={product.name} className="phase-image w-full h-full object-cover object-center" />
                       <div className="phase-image-placeholder absolute inset-0 rounded-full border border-dashed border-[var(--color-border)]" aria-hidden="true" />
                     </div>
                     <p className="text-[10px] sm:text-xs mt-1 sm:mt-2 truncate group-hover:underline">{product.name}</p>
