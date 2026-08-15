@@ -89,20 +89,7 @@ body[data-phase="color"] .phase-image-placeholder {
   display: none;
 }
 
-/* Subtle card hover lift */
+/* Phase 2: no animations — static card styling only */
 body[data-phase="color"] .group {
   border-radius: var(--border-radius-md);
-  transition: box-shadow 0.22s ease, transform 0.22s ease;
-}
-body[data-phase="color"] .group:hover {
-  box-shadow: var(--box-shadow-hover);
-  transform: translateY(-2px);
-}
-
-/* Image smooth zoom */
-body[data-phase="color"] .phase-image {
-  transition: transform 0.4s ease;
-}
-body[data-phase="color"] .phase-image:hover {
-  transform: scale(1.04);
 }
