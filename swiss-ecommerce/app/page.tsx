@@ -20,7 +20,7 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
             <div className="order-2 md:order-1">
               <h1 className="font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                <span className="phase-name-p1">Monochrome Studio</span><span className="phase-name-p2">Monolith</span><br />
+                <span className="phase-name-p1">Swiss Industrial</span><span className="phase-name-p2">Monolith</span><br />
                 <span className="text-[var(--color-text-secondary)] text-lg sm:text-xl md:text-2xl lg:text-3xl">
                   Minimalist Design
                 </span>

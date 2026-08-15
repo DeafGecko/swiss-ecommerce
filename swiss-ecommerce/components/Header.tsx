@@ -39,7 +39,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-mono text-base sm:text-xl font-bold tracking-tight">
           <Image src="/logo.svg" alt="Monolith logo" width={28} height={28} className="rounded-md" />
-          <span className="phase-name-p1">MONOCHROME</span>
+          <span className="phase-name-p1">SWISS</span>
           <span className="phase-name-p2">MONOLITH</span>
         </Link>
 
