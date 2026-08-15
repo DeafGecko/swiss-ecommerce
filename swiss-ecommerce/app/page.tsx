@@ -58,14 +58,14 @@ export default async function HomePage() {
                 {popular.map((product) => (
                   <Link key={product.id} href={`/product/${product.id}`} className="group">
                     <div className="border border-[var(--color-border)] rounded-xl p-3 flex flex-col items-center gap-2 bg-[var(--color-background-alt)] hover:border-[var(--color-border-dark)] hover:shadow-[var(--box-shadow-hover)] transition-all">
-                      <div className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 flex items-center justify-center relative">
-                        <div className="absolute inset-0 rounded-full blur-md opacity-40 bg-[var(--color-primary)]" aria-hidden="true" />
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0">
                         <img
                           src={product.images[0] ?? ''}
                           alt={product.name}
-                          className="phase-image relative w-full h-full rounded-full object-cover"
+                          className="phase-image w-full h-full rounded-full object-cover"
+                          style={{ filter: 'drop-shadow(0 0 10px rgba(0,0,0,0.25))' }}
                         />
-                        <div className="phase-image-placeholder absolute inset-0 rounded-full border border-dashed border-[var(--color-border)]" aria-hidden="true" />
+                        <div className="phase-image-placeholder w-full h-full rounded-full border border-dashed border-[var(--color-border)]" aria-hidden="true" />
                       </div>
                       <p className="text-[10px] sm:text-xs text-center font-mono leading-tight group-hover:underline line-clamp-2">{product.name}</p>
                     </div>
