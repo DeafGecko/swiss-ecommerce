@@ -79,7 +79,11 @@ body[data-phase="color"] header button {
 
 /* Phase 2 — brand name */
 body[data-phase="color"] .phase-name-p1 { display: none; }
-body[data-phase="color"] .phase-name-p2 { display: inline; }
+body[data-phase="color"] .phase-name-p2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
 
 /* Phase 2 — show images */
 body[data-phase="color"] .phase-image {

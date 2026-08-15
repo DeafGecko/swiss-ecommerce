@@ -81,7 +81,11 @@ body[data-phase="animated"] header button {
 
 /* ─── Phase 3: brand name ─── */
 body[data-phase="animated"] .phase-name-p1 { display: none; }
-body[data-phase="animated"] .phase-name-p2 { display: inline; }
+body[data-phase="animated"] .phase-name-p2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
 
 /* ─── Phase 3: show images ─── */
 body[data-phase="animated"] .phase-image {
