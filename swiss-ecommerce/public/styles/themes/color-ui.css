@@ -1,17 +1,18 @@
 :root {
-  --color-primary: #0a5cff;
-  --color-primary-hover: #0046cc;
-  --color-background: #f7fbff;
-  --color-background-alt: #e9f2ff;
-  --color-text: #0f172a;
-  --color-text-secondary: #334155;
-  --color-text-muted: #64748b;
+  /* Deep navy + warm white — feels premium, editorial */
+  --color-primary: #1e3a5f;
+  --color-primary-hover: #122540;
+  --color-background: #fafaf9;
+  --color-background-alt: #f0ede8;
+  --color-text: #1a1a2e;
+  --color-text-secondary: #4a4a6a;
+  --color-text-muted: #8888aa;
   --color-text-inverse: #ffffff;
-  --color-border: #c7d7f2;
-  --color-border-light: #dbe7fb;
-  --color-border-dark: #8fb0e3;
-  --color-shadow: rgba(10, 92, 255, 0.1);
-  --color-shadow-hover: rgba(10, 92, 255, 0.2);
+  --color-border: #ddd8d0;
+  --color-border-light: #ece9e3;
+  --color-border-dark: #b8b0a4;
+  --color-shadow: rgba(30, 58, 95, 0.08);
+  --color-shadow-hover: rgba(30, 58, 95, 0.18);
 
   --spacing-xs: clamp(0.25rem, 0.5vw, 0.5rem);
   --spacing-sm: clamp(0.5rem, 1vw, 1rem);
@@ -27,15 +28,15 @@
   --font-size-xl: clamp(1.25rem, 2.5vw, 1.5rem);
   --font-size-2xl: clamp(1.5rem, 3vw, 2rem);
 
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 12px;
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 16px;
   --font-family-primary: 'IBM Plex Mono', ui-monospace, monospace;
   --font-family-mono: 'IBM Plex Mono', ui-monospace, monospace;
-  --transition-duration: 200ms;
+  --transition-duration: 220ms;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
-  --box-shadow: 0 2px 8px var(--color-shadow);
-  --box-shadow-hover: 0 8px 24px var(--color-shadow-hover);
+  --box-shadow: 0 2px 10px var(--color-shadow);
+  --box-shadow-hover: 0 10px 30px var(--color-shadow-hover);
 
   --z-dropdown: 1000;
   --z-modal: 2000;
@@ -51,4 +52,22 @@ body[data-phase="color"] .phase-image {
 }
 body[data-phase="color"] .phase-image-placeholder {
   display: none;
+}
+
+/* Subtle card hover lift */
+body[data-phase="color"] .group {
+  border-radius: var(--border-radius-md);
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+body[data-phase="color"] .group:hover {
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Image smooth zoom */
+body[data-phase="color"] .phase-image {
+  transition: transform 0.4s ease;
+}
+body[data-phase="color"] .phase-image:hover {
+  transform: scale(1.04);
 }

@@ -1,17 +1,18 @@
 :root {
-  --color-primary: #0f766e;
-  --color-primary-hover: #115e59;
-  --color-background: #f0fdfa;
-  --color-background-alt: #ccfbf1;
-  --color-text: #134e4a;
-  --color-text-secondary: #0f766e;
-  --color-text-muted: #0d9488;
+  /* Deep emerald — rich, luxe, editorial */
+  --color-primary: #064e3b;
+  --color-primary-hover: #022c22;
+  --color-background: #f8faf8;
+  --color-background-alt: #eaf2ec;
+  --color-text: #0f1f18;
+  --color-text-secondary: #2d5a45;
+  --color-text-muted: #6b9e84;
   --color-text-inverse: #ffffff;
-  --color-border: #99f6e4;
-  --color-border-light: #bff9ee;
-  --color-border-dark: #5eead4;
-  --color-shadow: rgba(15, 118, 110, 0.12);
-  --color-shadow-hover: rgba(15, 118, 110, 0.28);
+  --color-border: #b8d8c4;
+  --color-border-light: #d4ecdc;
+  --color-border-dark: #7ab898;
+  --color-shadow: rgba(6, 78, 59, 0.1);
+  --color-shadow-hover: rgba(6, 78, 59, 0.24);
 
   --spacing-xs: clamp(0.25rem, 0.5vw, 0.5rem);
   --spacing-sm: clamp(0.5rem, 1vw, 1rem);
