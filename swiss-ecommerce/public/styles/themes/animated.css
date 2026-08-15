@@ -63,6 +63,14 @@ body[data-phase="animated"] li {
   font-family: 'Inter', system-ui, sans-serif;
 }
 
+/* ─── Phase 3: Inter for all header nav and links ─── */
+body[data-phase="animated"] header nav a,
+body[data-phase="animated"] header button {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+}
+
 /* ─── Phase 3: brand name ─── */
 body[data-phase="animated"] .phase-name-p1 { display: none; }
 body[data-phase="animated"] .phase-name-p2 { display: inline; }

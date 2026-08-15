@@ -61,6 +61,14 @@ body[data-phase="color"] li {
   font-family: 'Inter', system-ui, sans-serif;
 }
 
+/* Phase 2 — Inter for all header nav and links */
+body[data-phase="color"] header nav a,
+body[data-phase="color"] header button {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+}
+
 /* Phase 2 — brand name */
 body[data-phase="color"] .phase-name-p1 { display: none; }
 body[data-phase="color"] .phase-name-p2 { display: inline; }
