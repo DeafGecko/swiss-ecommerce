@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { ShoppingCart, Heart, Menu } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { PhaseSwitcher } from './PhaseSwitcher'
@@ -37,10 +36,9 @@ export function Header() {
     <header className="border-b border-[var(--color-border)] bg-[var(--color-background)] sticky top-0 z-50">
       <div className="container mx-auto px-3 sm:px-4 h-14 sm:h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 font-mono text-base sm:text-xl font-bold tracking-tight">
-          <Image src="/logo.svg" alt="Monolith logo" width={28} height={28} className="rounded-md phase-name-p2" />
-          <span className="phase-name-p1">SWISS</span>
-          <span className="phase-name-p2">MONOLITH</span>
+        <Link href="/" className="flex items-center gap-2 tracking-tight">
+          <span className="phase-name-p1 font-mono text-base sm:text-xl font-bold">SWISS</span>
+          <span className="phase-name-p2 text-xl sm:text-2xl font-semibold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", letterSpacing: '0.08em' }}>Monolith</span>
         </Link>
 
         {/* Mobile menu toggle */}
