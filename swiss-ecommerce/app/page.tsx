@@ -61,12 +61,14 @@ export default async function HomePage() {
                   Shop the Collection
                 </a>
               </div>
-              <div className="hero-frame md:pr-6 rounded-2xl overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
-                  alt="Monolith — minimalist interior"
-                  className="w-full h-auto object-cover hero-image"
-                />
+              <div className="md:pr-6">
+                <div className="hero-frame rounded-2xl overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
+                    alt="Monolith — minimalist interior"
+                    className="w-full h-auto object-cover hero-image"
+                  />
+                </div>
               </div>
             </div>
           </div>
