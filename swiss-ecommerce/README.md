@@ -1,4 +1,4 @@
-# Monochrome Studio
+# Monolith
 
 A clean, minimal online store built as a portfolio project.
 

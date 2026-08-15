@@ -20,7 +20,7 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
             <div className="order-2 md:order-1">
               <h1 className="font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                Monochrome Studio<br />
+                Monolith<br />
                 <span className="text-[var(--color-text-secondary)] text-lg sm:text-xl md:text-2xl lg:text-3xl">
                   Minimalist Design
                 </span>
@@ -39,7 +39,7 @@ export default async function HomePage() {
             <div className="order-1 md:order-2 aspect-video rounded-lg overflow-hidden border border-[var(--color-border)] relative bg-[var(--color-background-alt)]">
               <img
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
-                alt="Monochrome Studio — minimalist interior"
+                alt="Monolith — minimalist interior"
                 className="phase-image w-full h-full object-cover"
               />
               <div className="phase-image-placeholder absolute inset-0 flex items-center justify-center text-[var(--color-text-muted)] text-sm border border-dashed border-[var(--color-border)]">

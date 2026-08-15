@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Privacy Policy — Monochrome Studio',
+  title: 'Privacy Policy — Monolith',
 }
 
 export default function PrivacyPage() {

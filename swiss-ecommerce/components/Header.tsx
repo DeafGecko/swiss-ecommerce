@@ -38,8 +38,8 @@ export function Header() {
       <div className="container mx-auto px-3 sm:px-4 h-14 sm:h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-mono text-base sm:text-xl font-bold tracking-tight">
-          <Image src="/logo.svg" alt="Monochrome logo" width={28} height={28} className="rounded-md" />
-          <span>MONOCHROME</span>
+          <Image src="/logo.svg" alt="Monolith logo" width={28} height={28} className="rounded-md" />
+          <span>MONOLITH</span>
         </Link>
 
         {/* Mobile menu toggle */}

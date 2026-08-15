@@ -4,7 +4,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
 export const metadata = {
-  title: 'Monochrome Studio',
+  title: 'Monolith',
   description: 'Modern essentials for the minimalist lifestyle',
 }
 

@@ -16,14 +16,14 @@ export default function AboutPage() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="font-mono text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            About Monochrome Studio
+            About Monolith
           </h1>
           <div className="w-12 h-0.5 bg-[var(--color-primary)] mx-auto mt-4" aria-hidden="true"></div>
         </div>
 
         <div className="space-y-6 text-[var(--color-text-secondary)] leading-relaxed">
           <p className="text-lg">
-            Monochrome Studio is a minimalist design brand inspired by{' '}
+            Monolith is a minimalist design brand inspired by{' '}
             <span className="text-[var(--color-text)] font-medium">Swiss industrial precision</span>.
             We believe that great design is timeless, functional, and honest.
           </p>
@@ -75,7 +75,7 @@ export default function AboutPage() {
         <div className="mt-12 pt-8 border-t border-[var(--color-border-light)]">
           <h2 className="font-mono text-lg mb-4">Our Studio</h2>
           <p className="text-[var(--color-text-secondary)] text-sm">
-            Founded in 2024, Monochrome Studio is a small team of designers, makers, and dreamers
+            Founded in 2024, Monolith is a small team of designers, makers, and dreamers
             based in the heart of the Pacific Northwest. We're passionate about creating products
             that make everyday life more beautiful.
           </p>
