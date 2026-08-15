@@ -36,12 +36,15 @@ export default async function HomePage() {
               </a>
             </div>
             
-            <div className="order-1 md:order-2 aspect-video rounded-lg overflow-hidden border border-[var(--color-border)]">
+            <div className="order-1 md:order-2 aspect-video rounded-lg overflow-hidden border border-[var(--color-border)] relative bg-[var(--color-background-alt)]">
               <img
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
                 alt="Monochrome Studio — minimalist interior"
-                className="w-full h-full object-cover"
+                className="phase-image w-full h-full object-cover"
               />
+              <div className="phase-image-placeholder absolute inset-0 flex items-center justify-center text-[var(--color-text-muted)] text-sm border border-dashed border-[var(--color-border)]">
+                Hero Image
+              </div>
             </div>
           </div>
 
@@ -54,12 +57,9 @@ export default async function HomePage() {
               <div className="flex gap-3 sm:gap-4 overflow-x-auto pb-3 sm:pb-4">
                 {popular.map((product) => (
                   <Link key={product.id} href={`/product/${product.id}`} className="flex-shrink-0 w-16 sm:w-20 md:w-24 text-center group">
-                    <div className="aspect-square bg-[var(--color-background-alt)] border border-[var(--color-border)] group-hover:border-[var(--color-border-dark)] rounded-full overflow-hidden transition-colors">
-                      {product.images[0] ? (
-                        <img src={product.images[0]} alt={product.name} className="w-full h-full object-cover" />
-                      ) : (
-                        <div className="w-full h-full" aria-hidden="true" />
-                      )}
+                    <div className="aspect-square bg-[var(--color-background-alt)] border border-[var(--color-border)] group-hover:border-[var(--color-border-dark)] rounded-full overflow-hidden transition-colors relative">
+                      <img src={product.images[0] ?? ''} alt={product.name} className="phase-image w-full h-full object-cover" />
+                      <div className="phase-image-placeholder absolute inset-0 rounded-full border border-dashed border-[var(--color-border)]" aria-hidden="true" />
                     </div>
                     <p className="text-[10px] sm:text-xs mt-1 sm:mt-2 truncate group-hover:underline">{product.name}</p>
                   </Link>

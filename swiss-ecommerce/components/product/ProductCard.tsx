@@ -27,16 +27,15 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <div className="group border border-[var(--color-border)] rounded-lg overflow-hidden hover:shadow-[var(--box-shadow-hover)] transition-all">
       <Link href={`/product/${product.id}`} aria-label={`View ${product.name}`}>
-        <div className="aspect-square bg-[var(--color-background-alt)] overflow-hidden">
-          {product.images[0] ? (
-            <img
-              src={product.images[0]}
-              alt={product.name}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center text-[var(--color-text-muted)] text-xs">No image</div>
-          )}
+        <div className="aspect-square bg-[var(--color-background-alt)] overflow-hidden relative">
+          <img
+            src={product.images[0] ?? ''}
+            alt={product.name}
+            className="phase-image w-full h-full object-cover"
+          />
+          <div className="phase-image-placeholder absolute inset-0 flex items-center justify-center text-[var(--color-text-muted)] text-xs border border-dashed border-[var(--color-border)]">
+            {product.name}
+          </div>
         </div>
       </Link>
 

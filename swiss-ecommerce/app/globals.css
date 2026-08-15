@@ -78,3 +78,8 @@ body {
 }
 
 /* ... rest of the file */
+
+
+/* Default: hide images (Phase 1 wireframe) until a phase is loaded */
+.phase-image { display: none; }
+.phase-image-placeholder { display: flex; }

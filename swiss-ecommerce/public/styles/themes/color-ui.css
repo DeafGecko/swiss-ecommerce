@@ -44,3 +44,11 @@
   --z-tooltip: 500;
   --z-max: 9999;
 }
+
+/* Phase 2 — show images */
+body[data-phase="color"] .phase-image {
+  display: block;
+}
+body[data-phase="color"] .phase-image-placeholder {
+  display: none;
+}

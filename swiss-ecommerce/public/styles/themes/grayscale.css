@@ -47,3 +47,11 @@
   --z-tooltip: 500;
   --z-max: 9999;
 }
+
+/* Phase 1 — wireframe: hide all product/hero images */
+body[data-phase="grayscale"] .phase-image {
+  display: none;
+}
+body[data-phase="grayscale"] .phase-image-placeholder {
+  display: flex;
+}

@@ -23,6 +23,7 @@ export function PhaseSwitcher() {
     link.href = phase.file
     link.dataset.theme = themeId
     document.head.appendChild(link)
+    document.body.dataset.phase = themeId
     setActive(themeId)
     localStorage.setItem('theme-preference', themeId)
     setIsOpen(false)
