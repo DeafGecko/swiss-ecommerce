@@ -23,7 +23,7 @@ export function Header() {
     fetch('/api/categories')
       .then((res) => res.json())
       .then((data) => {
-        setCategories(data)
+        setCategories(Array.isArray(data) ? data : [])
         setIsLoading(false)
       })
       .catch(() => {

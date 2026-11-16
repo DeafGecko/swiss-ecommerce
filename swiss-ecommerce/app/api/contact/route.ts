@@ -24,6 +24,8 @@ export async function POST(req: NextRequest) {
     const safeName = escapeHtml(String(name))
     const safeEmail = escapeHtml(String(email))
     const safeMessage = escapeHtml(String(message)).replace(/\n/g, '<br>')
+    // Subject is a plain-text header, so keep it unescaped but strip line breaks.
+    const subjectName = String(name).replace(/[\r\n]+/g, ' ')
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -36,7 +38,7 @@ export async function POST(req: NextRequest) {
     const mailOptions = {
       from: process.env.SMTP_USER,
       to: 'dwirog@gmail.com',
-      subject: `New Contact Form Message from ${safeName}`,
+      subject: `New Contact Form Message from ${subjectName}`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       html: `
         <h2>New Contact Form Submission</h2>

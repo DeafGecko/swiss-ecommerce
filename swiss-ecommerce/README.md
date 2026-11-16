@@ -49,6 +49,7 @@ The site remembers which phase you picked the next time you visit.
 - **Tailwind CSS** — Handles all the styling
 - **Prisma + Neon** — The database where products are stored
 - **Zustand** — Manages the cart and wishlist in the browser
+- **Vitest + Testing Library** — Unit tests for the stores, API routes, and components
 - **Vercel** — Where the site is hosted and deployed
 
 ---
@@ -72,6 +73,23 @@ npx ts-node prisma/seed.ts
 # 5. Start the dev server
 npm run dev
 ```
+
+---
+
+## Running the Tests
+
+```bash
+# Run the unit tests once
+npm test
+
+# Re-run them on every file change
+npm run test:watch
+
+# Type-check the project
+npx tsc --noEmit
+```
+
+The suite covers the cart and wishlist stores, the checkout, contact, and categories API routes, and the Header, ProductCard, PhaseSwitcher, and checkout success components. Tests live in `tests/unit/`.
 
 ---
 

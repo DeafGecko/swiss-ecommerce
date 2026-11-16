@@ -34,8 +34,10 @@ function SuccessContent() {
         date: new Date().toISOString(),
       }
 
+      // Only record an order when there is a cart behind it, so a bare
+      // /checkout/success?session_id=... visit can't create a $0 order.
       const existingOrders = JSON.parse(localStorage.getItem('mock-orders') || '[]')
-      if (!existingOrders.some((o: { id: string }) => o.id === id)) {
+      if (items.length > 0 && !existingOrders.some((o: { id: string }) => o.id === id)) {
         existingOrders.push(order)
         localStorage.setItem('mock-orders', JSON.stringify(existingOrders))
         toast.success('Order saved successfully!')

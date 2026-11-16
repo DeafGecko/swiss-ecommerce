@@ -15,6 +15,11 @@ interface Product {
   category: string
 }
 
+// Shape both stores expect for a saved item.
+function toStoreProduct(product: Product) {
+  return { id: product.id, name: product.name, price: product.price, image: product.images[0] }
+}
+
 export function ProductCard({ product }: { product: Product }) {
   const addToCart = useCartStore((state) => state.addItem)
   const { toggleItem, isInWishlist } = useWishlistStore()
@@ -50,7 +55,7 @@ export function ProductCard({ product }: { product: Product }) {
             type="button"
             aria-label={`Add ${product.name} to cart`}
             onClick={() => {
-              addToCart({ id: product.id, name: product.name, price: product.price })
+              addToCart(toStoreProduct(product))
               toast.success('Added to cart!')
             }}
             className="flex-1 px-2 py-1 text-xs font-mono border border-[var(--color-border)] hover:border-[var(--color-border-dark)] hover:bg-[var(--color-background-alt)] transition-colors rounded flex items-center justify-center gap-1"
@@ -63,7 +68,7 @@ export function ProductCard({ product }: { product: Product }) {
             type="button"
             aria-label={wishlisted ? `Remove ${product.name} from wishlist` : `Save ${product.name} to wishlist`}
             onClick={() => {
-              toggleItem({ id: product.id, name: product.name, price: product.price })
+              toggleItem(toStoreProduct(product))
               setWishlisted(!wishlisted)
               toast.success(wishlisted ? 'Removed from wishlist' : 'Saved to wishlist!')
             }}
